@@ -1,0 +1,12 @@
+{
+	"name": "",
+	"short_name": "",
+	"theme_color": "",
+	"background_color": "",
+	"display": "standalone",
+	"orientation": "portrait",
+	"Scope": "/",
+	"start_url": "/index.html",
+	"icons": [],
+	"splash_pages": null
+}
