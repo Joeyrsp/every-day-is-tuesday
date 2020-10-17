@@ -1,12 +1,36 @@
 {
-	"name": "",
-	"short_name": "",
-	"theme_color": "",
-	"background_color": "",
-	"display": "standalone",
-	"orientation": "portrait",
-	"Scope": "/",
-	"start_url": "/index.html",
-	"icons": [],
-	"splash_pages": null
+    "name": "every-day-is-tuesday",
+    "short_name": "edit",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#fff",
+    "theme_color": "#000",
+    "icons": [
+        {
+            "src": "/assets/icons/icon.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "/assets/icons/icon.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/assets/icons/icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/assets/icons/icon.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/icons/icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
 }
