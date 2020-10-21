@@ -1,9 +1,13 @@
-@import "partials/variables";
+:root {
+    --outline-colour: red;
+}
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    outline: 1px dotted var(--outline-colour);
+    outline-offset: -0.5px;
 }
 
 .water {
@@ -11,4 +15,36 @@
     top: 0;
     left: 0;
     z-index: -1;
+    // width: 100vw;
+    // height: 100vh;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    
+    > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 50px;
+
+        .hamburger {
+            height: 50px;
+        }
+
+        .hamburger use::part(import) {
+            animation: redd 5s forwards;
+        }
+    }
+}
+
+@keyframes redd {
+    0% {
+        fill: red;
+    }
+    100% {
+        fill: green;
+    }
 }

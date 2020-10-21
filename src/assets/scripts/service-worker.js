@@ -25,17 +25,19 @@ self.addEventListener('fetch', function(event) {
     );
 });
 
-self.addEventListener('activate', function(e) {
-    console.log('service worker: Activate');
+self.addEventListener("activate", function (e) {
+    console.log("service worker: Activate");
     e.waitUntil(
-    caches.keys().then(function(keyList) {
-      return Promise.all(keyList.map(function(key) {
-        if (key !== cacheName) {
-          console.log('service worker: Removing old cache', key);
-          return caches.delete(key);
-        }
-      }));
-    })
+        caches.keys().then(function (keyList) {
+            return Promise.all(
+                keyList.map(function (key) {
+                    if (key !== cacheName) {
+                        console.log("service worker: Removing old cache", key);
+                        return caches.delete(key);
+                    }
+                })
+            );
+        })
     );
     return self.clients.claim();
 });

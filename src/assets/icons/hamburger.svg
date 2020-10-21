@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol part="import" id="import" viewBox="0 0 50 30" fill="#2B3464" style="fill: var(--primary-colour, #2B3464)">
+        <rect transform="translate(0 0)" width="50" height="8" rx="4"/>
+        <rect transform="translate(0 11)" width="50" height="8" rx="4"/>
+        <rect transform="translate(0 22)" width="50" height="8" rx="4"/>
+    </symbol>
+</svg>

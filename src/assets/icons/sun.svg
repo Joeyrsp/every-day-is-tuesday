@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="44.392" height="44.393" viewBox="0 0 44.392 44.393">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cb8e1d;
+      }
+    </style>
+  </defs>
+  <g id="Group_45" data-name="Group 45" transform="translate(-7.6 -7.6)">
+    <path id="Path_97" data-name="Path 97" class="cls-1" d="M42.948,33.4A9.548,9.548,0,1,0,52.5,42.948h0A9.548,9.548,0,0,0,42.948,33.4Zm0,17.945a8.4,8.4,0,1,1,8.4-8.4A8.4,8.4,0,0,1,42.948,51.345Z" transform="translate(-13.151 -13.151)"/>
+    <rect id="Rectangle_31" data-name="Rectangle 31" class="cls-1" width="1.15" height="8.742" transform="translate(29.221 7.6)"/>
+    <rect id="Rectangle_32" data-name="Rectangle 32" class="cls-1" width="1.15" height="8.742" transform="translate(29.221 43.25)"/>
+    <rect id="Rectangle_33" data-name="Rectangle 33" class="cls-1" width="8.742" height="1.15" transform="translate(43.25 29.221)"/>
+    <rect id="Rectangle_34" data-name="Rectangle 34" class="cls-1" width="8.742" height="1.15" transform="translate(7.6 29.221)"/>
+    <rect id="Rectangle_35" data-name="Rectangle 35" class="cls-1" width="1.15" height="8.742" transform="translate(38.257 39.07) rotate(-45)"/>
+    <rect id="Rectangle_36" data-name="Rectangle 36" class="cls-1" width="1.15" height="8.742" transform="translate(14.352 15.154) rotate(-45)"/>
+    <rect id="Rectangle_37" data-name="Rectangle 37" class="cls-1" width="8.742" height="1.15" transform="translate(14.346 44.433) rotate(-45)"/>
+    <rect id="Rectangle_38" data-name="Rectangle 38" class="cls-1" width="8.742" height="1.15" transform="translate(38.263 20.528) rotate(-45)"/>
+  </g>
+</svg>
