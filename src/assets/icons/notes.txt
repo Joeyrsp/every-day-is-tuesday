@@ -1,0 +1,7 @@
+settings for https://jakearchibald.github.io/svgomg/:
+inline styles
+clean ids
+move attrs to parent group
+round/rewrite transforms
+prever viewbox to width/height
+remove style elements

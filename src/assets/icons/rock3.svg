@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol part="import primary" id="import" viewBox="0 0 170.289 145.596" fill="#2B3464">
+    <path d="M7.38 43.4c2.32-.8-2.5-62.48 57.59-37.41s54.2 0 54.2 0 36.64 9.7 38.46 37.4 27.54 52.98 0 65.02-71.05 39.71-101.27 37-33.6-.1-48.98-24.82-2.32-76.4 0-77.2z" fill="#ad3527"/>
+  </symbol>
+  <use href="#import"/>
+</svg>

@@ -1,13 +1,11 @@
-:root {
-    --outline-colour: red;
-}
+:root { }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    outline: 1px dotted var(--outline-colour);
-    outline-offset: -0.5px;
+    // outline: 1px dotted red;
+    // outline-offset: -0.5px;
 }
 
 .water {
@@ -22,29 +20,28 @@
 .nav {
     display: flex;
     justify-content: space-between;
+    padding: 10px;
     
     > * {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
+        height: 30px;
         width: 50px;
 
-        .hamburger {
-            height: 50px;
-        }
-
-        .hamburger use::part(import) {
-            animation: redd 5s forwards;
+        svg {
+            height: 100%;
+            animation: pop 0.3s forwards;
         }
     }
 }
 
-@keyframes redd {
-    0% {
-        fill: red;
-    }
-    100% {
-        fill: green;
+.hamburger {
+    use::part(import) { }
+}
+
+@keyframes pop {
+    50% {
+        scale: 1.2;
     }
 }

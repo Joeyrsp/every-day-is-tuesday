@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol part="import primary" id="import" viewBox="0 0 18 30" stroke="#cb8e1d" stroke-width="2px" fill="none">
+    <circle cx="14" cy="14" r="14" stroke="none"/>
+    <circle cx="14" cy="14" r="13" fill="none"/>
+  </symbol>
+  <use href="#import"/>
+</svg>
