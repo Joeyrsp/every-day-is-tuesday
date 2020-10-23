@@ -1,7 +1,7 @@
 {
-  "short_name": "Hyperapp",
-  "name": "Hyperapp starter",
-  "description": "Hyperapp starter with a modern configuration and best-practices in mind.",
+  "short_name": "EDIT",
+  "name": "Every Day Is Tuesday",
+  "description": "An app to prompt tactility by suggesting random rituals to help users ground themselves.",
   "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
