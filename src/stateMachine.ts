@@ -1,52 +1,64 @@
 import { Machine } from 'xstate';
 
 export const tuesdayMachine = Machine({
-    id: 'tuesday',
-    initial: 'filling',
-    context: {},
-    states: {
-        filling: {
-            on: {
-                NEXT: 'setScene'
-            }
+  id: 'tuesday',
+  type: 'parallel',
+  states: {
+    time: {
+      initial: 'day',
+      states: {
+        day: {
+          on: {
+            TOGGLE_TIME: 'night',
+          },
         },
-        setScene: {
-            on: {
-                NEXT: 'bubbling'
-            }
+        night: {
+          on: {
+            TOGGLE_TIME: 'day',
+          },
         },
-        bubbling: {
-            on: {
-                NEXT: 'home'
-            }
-        },
-        home: {
-            on: {
-                NEW_CUSTOM: 'writing',
-                TAP_BUBBLE: 'selecting',
-                MENU: 'menu',
-                VIEW_PEBBLES: 'pebbles',
-            }
-        },
-        writing: {
-            on: {
-                RETURN: 'home'
-            }
-        },
-        selecting: {
-            on: {
-                RETURN: 'home'
-            }
-        },
-        menu: {
-            on: {
-                RETURN: 'home'
-            }
-        },
-        pebbles: {
-            on: {
-                RETURN: 'home'
-            }
-        },
+      },
     },
+    navigation: {
+      initial: 'grounded',
+      states: {
+        grounded: {
+          initial: 'home',
+          on: {
+            SCEND: 'ascended'
+          },
+          states: {
+            home: {
+              on: {
+                MENU: 'menu',
+              },
+            },
+            menu: {
+              on: {
+                MENU: 'home',
+              },
+            },
+          },
+        },
+        ascended: {
+          initial: 'home',
+          on: {
+            SCEND: 'grounded'
+          },
+          states: {
+            home: {
+              on: {
+                MENU: 'menu',
+              },
+            },
+            menu: {
+              on: {
+                MENU: 'home',
+              },
+            },
+          },
+        },
+      },
+    }
+  },
 });
