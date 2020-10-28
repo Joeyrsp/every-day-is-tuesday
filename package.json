@@ -5,7 +5,8 @@
     "lint": "eslint \"./src/**/*.{js,jsx}\" --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "clean": "rmdir dist /s /q & rmdir .cache /s /q",
-    "push": "git subtree push --prefix dist origin gh-pages"
+    "push": "git subtree push --prefix dist origin gh-pages",
+    "turbo": "npm run clean & npm run build && git add ./dist/ && git commit -m \"auto pushing build\" && npm run push && git push && npm run clean"
   },
   "dependencies": {
     "classcat": "^4.1.0",
