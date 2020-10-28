@@ -4,7 +4,7 @@
   "description": "An app to prompt tactility by suggesting random rituals to help users ground themselves.",
   "display": "fullscreen",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "./index.html",
   "theme_color": "white",
   "background_color": "white",
   "orientation": "portrait",

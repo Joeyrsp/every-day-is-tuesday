@@ -1,6 +1,5 @@
-import cc from 'classcat';
-import { Menu, Scend, ToggleTime } from '/actions';
-import { machineHasAll } from '/utils';
+import { Menu, Scend, ToggleTime, GrabBubble } from '/actions';
+import { machineHasAll, mergeProps } from '/utils';
 
 import styles from '/styles/main.scss';
 
@@ -45,13 +44,29 @@ export default (state) =>
         </div>
       </div>
       <div>
-        <div onclick={Menu}><SvgHamburger class={cc([
+        <div onclick={Menu}><SvgHamburger class={[
           styles.iconHamburger,
           { [styles.arrow]: machineHasAll(state.machine, 'menu') }
-        ])} /></div>
+        ]} /></div>
       </div>
     </div>
 
+    <div class={styles.bubbles}>
+      {Object.entries(state.bubbles).map(([bubbleId, bubble]) => mergeProps({
+        id: bubbleId,
+        class: {},
+        style: {
+          transform: `translate(${bubble.x + (window.innerWidth) / 2 - 25}px, ${bubble.y - 25}px)`,
+        },
+        onclick: GrabBubble,
+      },
+        bubble.type == 'sight' && <SvgSight class={styles.iconSight} /> ||
+        bubble.type == 'smell' && <SvgSmell class={styles.iconSmell} /> ||
+        bubble.type == 'sound' && <SvgSound class={styles.iconSound} /> ||
+        bubble.type == 'taste' && <SvgTaste class={styles.iconTaste} /> ||
+        bubble.type == 'touch' && <SvgTouch class={styles.iconTouch} />
+      ))}
+    </div>
 
-    {console.log(JSON.stringify(state, null, 2))}
+    {/* {console.log(JSON.stringify(state, null, 2))} */}
   </body>

@@ -1,10 +1,14 @@
 import cc from "classcat";
 
-export const mergeClasses = (props, element) => {
-  element.props.class = cc([
-    element.props.class,
-    props.class
-  ])
+export const mergeProps = (props, element) => {
+  element.props = {
+    ...element.props,
+    ...props,
+    class: cc([
+      element.props.class,
+      props.class
+    ])
+  }
   return element;
 }
 
@@ -25,4 +29,18 @@ export const machineHasAll = (machine, query) => {
   let path = pathify(machine).flat(Infinity);
 
   return [query].flat().reduce((acc, cur) => acc && path.includes(cur), true);
+}
+
+export const newBubble = (type: string) => ({
+  type,
+  state: 'idle',
+  x: Math.random() * 30 - 15,
+  y: window.innerHeight - 25 + 50,
+  dx: 0,
+  dy: 0,
+  rand1: Math.random(),
 })
+
+export const clamp = (min: number, x: number, max: number) => x < min ? min : x > max ? max : x;
+
+export const sign = (x: number) => x === 0 ? 0 : x > 0 ? 1 : -1;
