@@ -1,6 +1,6 @@
-import { mergeClasses } from "/utils";
+import { mergeProps } from "/utils";
 
-export const SvgDayA = (props) => mergeClasses(props,
+export const SvgDayA = (props) => mergeProps(props,
   <svg viewBox="0 0 45.851 34.232" >
     <path class="secondary" fill="#f8ccb9" transform="translate(7544.5 23853.406)" d="M-7540.19-23841.1s6.037-4.646 13.843 2.274a8.3 8.3 0 0113.22 0c8.367 11.353 15.219.427 14.414 7.964s-3 8.6-11.488 7.271-26.612 10.568-32.265 0 2.276-17.509 2.276-17.509z" />
     <circle class="primary" cx="10" cy="10" r="10" transform="translate(14.5 6.406)" fill="#e22323" />
@@ -9,7 +9,7 @@ export const SvgDayA = (props) => mergeClasses(props,
   </svg>
 )
 
-export const SvgDayG = (props) => mergeClasses(props,
+export const SvgDayG = (props) => mergeProps(props,
 <svg viewBox="0 0 44.392 44.393" fill="#cb8e1d" class="primary">
   <path d="M22.197 12.648a9.548 9.548 0 109.552 9.548 9.548 9.548 0 00-9.552-9.548zm0 17.945a8.4 8.4 0 118.4-8.4 8.4 8.4 0 01-8.4 8.4z"/>
   <path d="M21.621 0h1.15v8.742h-1.15z"/>
@@ -23,21 +23,7 @@ export const SvgDayG = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgGround = (props) => mergeClasses(props,
-<svg viewBox="0 0 28 28" class="primary" fill="none" stroke="#cb8e1d" stroke-width="2px">
-    <circle cx="14" cy="14" r="13"/>
-</svg>
-)
-
-export const SvgHamburger = (props) => mergeClasses(props,
-<svg viewBox="0 0 50 30" class="primary" fill="#2B3464">
-  <rect width="50" height="7" rx="4"/>
-  <rect y="11.5" width="50" height="7" rx="4"/>
-  <rect y="23" width="50" height="7" rx="4"/>
-</svg>
-)
-
-export const SvgNightA = (props) => mergeClasses(props,
+export const SvgNightA = (props) => mergeProps(props,
 <svg viewBox="0 0 46.4 27.826" >
   <path class="tertiary" fill="#6F6776" d="M4.81 5.9s6.04-4.65 13.84 2.27a8.3 8.3 0 0113.22 0c8.37 11.36 15.22.43 14.42 7.97s-3 8.6-11.5 7.27-26.6 10.57-32.26 0S4.81 5.9 4.81 5.9z"/>
   <circle class="primary" cx="10" cy="10" r="10" transform="translate(14.5 0)" fill="#ffe5e5"/>
@@ -45,13 +31,21 @@ export const SvgNightA = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgNightG = (props) => mergeClasses(props,
+export const SvgNightG = (props) => mergeProps(props,
 <svg viewBox="0 0 39.271 38.027" class="primary" fill="#fffbef">
   <path transform="translate(-1.83 -2.346)" d="M21.72 40.37A19.77 19.77 0 0041.1 24.93a.45.45 0 00-.16-.45.45.45 0 00-.47-.06 18.77 18.77 0 01-7.81 1.7A19 19 0 0113.67 7.14a19.74 19.74 0 01.49-4.24.45.45 0 00-.16-.45.45.45 0 00-.47-.06 19.87 19.87 0 008.2 37.98zM13.1 3.6a19.5 19.5 0 00-.33 3.52 19.92 19.92 0 0019.89 19.9 19.74 19.74 0 007.33-1.41 18.97 18.97 0 11-26.9-22z"/>
 </svg>
 )
 
-export const SvgScend = (props) => mergeClasses(props,
+export const SvgHamburger = (props) => mergeProps(props,
+<svg viewBox="0 0 50 30" class="primary" fill="#2B3464">
+  <rect width="50" height="7" rx="4"/>
+  <rect y="11.5" width="50" height="7" rx="4"/>
+  <rect y="23" width="50" height="7" rx="4"/>
+</svg>
+)
+
+export const SvgScend = (props) => mergeProps(props,
 <svg class="primary" viewBox="0 0 30 30" fill="#E22323" stroke="#E22323" stroke-width="4">
   <defs>
     <clipPath id="innerfy">
@@ -62,9 +56,9 @@ export const SvgScend = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgSight = (props) => mergeClasses(props,
+export const SvgSight = (props) => mergeProps(props,
 <svg viewBox="0 0 46.771 46.771" >
-  <path class="secondary" d="M23.39 0A23.39 23.39 0 110 23.39 23.39 23.39 0 0123.39 0z" fill="#FF8594"/>
+  <path class="secondary" d="M23.39 0A23.39 23.39 0 110 23.39 23.39 23.39 0 0123.39 0z" fill="#FC9C86"/>
   <g class="primary" transform="translate(6.81 6.688)" fill="#FDF1D8">
     <path d="M1067.8 138.53a19.83 19.83 0 00-6.75-5.5 19.73 19.73 0 00-17.54 0 19.84 19.84 0 00-6.75 5.5 4.27 4.27 0 000 5.27 19.82 19.82 0 006.75 5.5 19.72 19.72 0 0017.54 0 19.82 19.82 0 006.75-5.5 4.27 4.27 0 000-5.27zm-1.08 4.42a18.49 18.49 0 01-6.28 5.12 18.35 18.35 0 01-16.32 0 18.5 18.5 0 01-6.27-5.12 2.9 2.9 0 010-3.56 18.5 18.5 0 016.28-5.12 18.36 18.36 0 0116.3 0 18.5 18.5 0 016.29 5.12 2.9 2.9 0 010 3.56z" transform="translate(-1035.849 -125.366)"/>
     <path d="M1057.03 135.78a7.18 7.18 0 102.43 5.39 7.18 7.18 0 00-2.43-5.38zm-4.75 11.19a5.8 5.8 0 115.8-5.8 5.8 5.8 0 01-5.8 5.8z" transform="translate(-1035.849 -125.366)"/>
@@ -79,7 +73,7 @@ export const SvgSight = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgSmell = (props) => mergeClasses(props,
+export const SvgSmell = (props) => mergeProps(props,
 <svg viewBox="0 0 46.771 46.771" >
   <circle class="secondary" cx="23.386" cy="23.386" r="23.386" fill="#2A8295"/>
   <g class="primary" transform="translate(10.87 7.15)" fill="#C0DEEB">
@@ -91,9 +85,9 @@ export const SvgSmell = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgSound = (props) => mergeClasses(props,
+export const SvgSound = (props) => mergeProps(props,
 <svg viewBox="0 0 46.771 46.771" >
-  <circle class="secondary" cx="23.386" cy="23.386" r="23.386" fill="#F2513F"/>
+  <circle class="secondary" cx="23.386" cy="23.386" r="23.386" fill="#F35645"/>
   <g class="primary" transform="translate(14.01 7.71)" fill="#E5DBDB">
     <path d="M1244.63 21.8a9.09 9.09 0 00-7.81-13.73 9.1 9.1 0 00-9.09 9.09.7.7 0 101.39 0 7.7 7.7 0 017.7-7.7 7.7 7.7 0 016.62 11.64l-2.32 3.9a8.62 8.62 0 00-.9 6.64 4.08 4.08 0 01-.7 3.6 4.13 4.13 0 01-3.3 1.63h-2.96a4.15 4.15 0 01-4.14-4.14.7.7 0 10-1.39 0 5.54 5.54 0 005.53 5.53h2.96a5.54 5.54 0 005.34-7 7.25 7.25 0 01.75-5.58z" transform="translate(-1227.73 -8.07)"/>
     <path d="M1232.51 30a.7.7 0 000 1.39 3.3 3.3 0 002.07-5.88 3.7 3.7 0 01-1.37-2.88V21.4h1.92a.99.99 0 011 1 .7.7 0 001.38 0 2.38 2.38 0 00-2.38-2.39h-1.92v-2.48a3.61 3.61 0 016.72-1.84 3.58 3.58 0 01.05 3.59.7.7 0 101.2.67 5 5 0 00-4.36-7.42 5 5 0 00-5 5v5.1a5.06 5.06 0 001.89 3.95 1.92 1.92 0 01-1.2 3.42z" transform="translate(-1227.73 -8.07)"/>
@@ -104,9 +98,9 @@ export const SvgSound = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgTaste = (props) => mergeClasses(props,
+export const SvgTaste = (props) => mergeProps(props,
 <svg viewBox="0 0 46.771 46.666" >
-  <ellipse class="secondary" cx="23.386" cy="23.333" rx="23.386" ry="23.333" fill="#76E8D4"/>
+  <ellipse class="secondary" cx="23.386" cy="23.333" rx="23.386" ry="23.333" fill="#32A2A0"/>
   <g class="primary" transform="translate(8.21 9.12)" fill="#FFFFFF">
     <path d="M27.24 5.62a1.83 1.83 0 001-1.57 1.85 1.85 0 00-.89-1.66A13.3 13.3 0 0021.37.26a12.18 12.18 0 00-6.18 1.18C11.27-.76 7.13-.44 2.9 2.4a1.88 1.88 0 00.15 3.21A30.6 30.6 0 006.31 7.1a5.32 5.32 0 00-.12 1.1v8.16a8.96 8.96 0 0017.92 0V8.2a5.26 5.26 0 00-.11-1.1 30.32 30.32 0 003.24-1.47zM3.68 4.4a.5.5 0 01-.26-.4.49.49 0 01.23-.45C7.59.9 11.23.67 14.8 2.8a.69.69 0 00.65.03 10.71 10.71 0 0111.16.71.47.47 0 01.23.45.47.47 0 01-.26.4 27.83 27.83 0 01-3.05 1.4 5.28 5.28 0 00-4.7-2.88 4.38 4.38 0 01-7.38 0A5.26 5.26 0 006.77 5.8a32.5 32.5 0 01-3.09-1.41zm19.07 11.96a7.59 7.59 0 11-15.18 0V8.19a3.9 3.9 0 013.9-3.9 3.01 3.01 0 013 3.01v4.48a.69.69 0 001.38 0V7.3a3.01 3.01 0 013-3 3.9 3.9 0 013.9 3.89z"/>
     <path d="M15.16 13.42a.69.69 0 00-.69.7v1.4a.69.69 0 101.38 0v-1.4a.69.69 0 00-.69-.7z"/>
@@ -119,10 +113,10 @@ export const SvgTaste = (props) => mergeClasses(props,
 </svg>
 )
 
-export const SvgTouch = (props) => mergeClasses(props,
+export const SvgTouch = (props) => mergeProps(props,
 <svg viewBox="0 0 46.771 46.771" >
-  <path class="secondary" d="M23.38 0A23.39 23.39 0 110 23.39 23.39 23.39 0 0123.38 0z" fill="#182839"/>
-  <g class="primary" transform="translate(10.62 3.05)" fill="#AEE5F5">
+  <path class="secondary" d="M23.38 0A23.39 23.39 0 110 23.39 23.39 23.39 0 0123.38 0z" fill="#182933"/>
+  <g class="primary" transform="translate(10.62 3.05)" fill="#BBC0DB">
     <path d="M21.63 20.88l-8.34-3.27v-8a3.49 3.49 0 10-6.98 0v8.26L3.3 21.23A4.14 4.14 0 002.23 24v6.24a6.25 6.25 0 006.24 6.25h9.55a6.25 6.25 0 006.24-6.25v-5.51a4.14 4.14 0 00-2.63-3.85zm1.05 9.38a4.67 4.67 0 01-4.67 4.67H8.46a4.67 4.67 0 01-4.67-4.67V24a2.55 2.55 0 01.66-1.71l1.86-2.07v5.87a.79.79 0 001.58 0V9.6a1.92 1.92 0 013.83 0v8.54a.79.79 0 00.5.73l8.83 3.47a2.55 2.55 0 011.63 2.4v5.51z"/>
     <path d="M9.8 3.78a.79.79 0 00.78-.79V.79a.79.79 0 10-1.57 0v2.2a.79.79 0 00.79.79z"/>
     <path d="M15.96 11.32a.79.79 0 00.79.79h2.2a.79.79 0 100-1.58h-2.2a.79.79 0 00-.79.8z"/>
