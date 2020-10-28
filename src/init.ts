@@ -14,6 +14,7 @@ export default {
   ], // this is a demo hack. replace with empty list when appropriate
   machine: tuesdayMachine.getInitialState('navigation.grounded.home').value,
   time: 0,
+  bubbleSize: 50,
   bubbleSlots: {
     first: '',
     second: '',
@@ -25,7 +26,7 @@ export default {
     sound: true,
     taste: true,
     touch: true,
-  }
+  },
   bubbles: Object.fromEntries([
     'sight',
     'sight',
@@ -37,5 +38,7 @@ export default {
     'taste',
     'touch',
     'touch',
+    'custom',
+    'custom',
   ].map((type) => [uuidv4(), newBubble(type)])),
 }

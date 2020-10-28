@@ -1,4 +1,4 @@
-import { Menu, Scend, ToggleTime, GrabBubble } from '/actions';
+import { Menu, Scend, GenRitual, GrabBubble } from '/actions';
 import { machineHasAll, mergeProps } from '/utils';
 
 import styles from '/styles/main.scss';
@@ -14,7 +14,12 @@ import {
   SvgSmell,
   SvgSound,
   SvgTaste,
-  SvgTouch
+  SvgTouch,
+  SvgCustom,
+  SvgActivity,
+  SvgEmbody,
+  SvgScene,
+  SvgWater
 } from "/views/svgs";
 
 // Root application view
@@ -29,7 +34,7 @@ export default (state) =>
       <div>
         <div onclick={Scend}><SvgScend class={styles.iconAscend} /></div>
       </div>
-      <div onclick={ToggleTime}>
+      <div onclick={GenRitual}>
         <div class={{ [styles.active]: machineHasAll(state.machine, ['day', 'grounded']) }}>
           <SvgDayG class={styles.iconDayG} />
         </div>
@@ -52,11 +57,14 @@ export default (state) =>
     </div>
 
     <div class={styles.bubbles}>
-      {Object.entries(state.bubbles).map(([bubbleId, bubble]) => mergeProps({
-        id: bubbleId,
-        class: {},
+      {Object.entries(state.bubbles).map(([id, bubble]) => mergeProps({
+        id,
+        key: id,
+        class: {
+          [styles.picked]: Object.values(state.bubbleSlots).includes(id),
+        },
         style: {
-          transform: `translate(${bubble.x + (window.innerWidth) / 2 - 25}px, ${bubble.y - 25}px)`,
+          transform: `translate(${bubble.x + (window.innerWidth - bubble.size) / 2}px, ${bubble.y - bubble.size / 2}px)`,
         },
         onclick: GrabBubble,
       },
@@ -64,9 +72,20 @@ export default (state) =>
         bubble.type == 'smell' && <SvgSmell class={styles.iconSmell} /> ||
         bubble.type == 'sound' && <SvgSound class={styles.iconSound} /> ||
         bubble.type == 'taste' && <SvgTaste class={styles.iconTaste} /> ||
-        bubble.type == 'touch' && <SvgTouch class={styles.iconTouch} />
+        bubble.type == 'touch' && <SvgTouch class={styles.iconTouch} /> ||
+        bubble.type == 'custom' && <SvgCustom class={styles.iconCustom} /> ||
+        bubble.type == 'activity' && <SvgActivity class={styles.iconActivity} /> ||
+        bubble.type == 'embody' && <SvgEmbody class={styles.iconEmbody} /> ||
+        bubble.type == 'scene' && <SvgScene class={styles.iconScene} />
       ))}
+      {state.message && <div class={styles.message} >
+        <div>
+          {state.message}
+        </div>
+      </div>}
     </div>
+
+    <SvgWater class={styles.water} />
 
     {/* {console.log(JSON.stringify(state, null, 2))} */}
   </body>

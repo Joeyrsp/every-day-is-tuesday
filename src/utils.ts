@@ -9,6 +9,7 @@ export const mergeProps = (props, element) => {
       props.class
     ])
   }
+  element.key = props.key;
   return element;
 }
 
@@ -39,6 +40,7 @@ export const newBubble = (type: string) => ({
   dx: 0,
   dy: 0,
   rand1: Math.random(),
+  size: type == 'custom' ? 60 : 50,
 })
 
 export const clamp = (min: number, x: number, max: number) => x < min ? min : x > max ? max : x;

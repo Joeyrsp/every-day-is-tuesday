@@ -7,6 +7,9 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
   transition: background-color 1s;
   padding-top: 50px;
 }
@@ -23,7 +26,7 @@ svg {
   background-color: #f8f8f8;
 
   .water {
-    background-color: #9FC9D880;
+    fill: #9fc9d880;
   }
 
   .nav {
@@ -35,23 +38,23 @@ svg {
   background-color: #000000;
 
   .water {
-    background-color: #72EFFF80;
+    fill: #72efff80;
   }
 
   .nav {
-    background-color: #1E1E1E;
+    background-color: #1e1e1e;
   }
 }
 
 .theme-day.theme-ascended {
-  background-color: #FA8599;
+  background-color: #fa8599;
 
   .water {
-    background-color: #fff6b180;
+    fill: #fff6b180;
   }
 
   .nav {
-    background-color: #FEA3B7;
+    background-color: #fea3b7;
   }
 }
 
@@ -59,43 +62,44 @@ svg {
   background-color: #302038;
 
   .water {
-    background-color: #1de3a640;
+    fill: #1de3a640;
   }
 
   .nav {
-    background-color: #4D3E56;
+    background-color: #4d3e56;
   }
 }
 
-.theme-grounded { }
+.theme-grounded {
+}
 
 .theme-ascended {
   .icon-hamburger {
-    fill: #C95E00;
+    fill: #c95e00;
   }
 
   .icon-ascend circle {
-    fill: #CB8E1D00;
-    stroke: #CB8E1DFF;
+    fill: #cb8e1d00;
+    stroke: #cb8e1dff;
   }
 }
 
 .theme-night {
   .icon-sight {
     :global .secondary {
-      fill: #FF8594;
+      fill: #ff8594;
     }
   }
 
   .icon-taste {
     :global .secondary {
-      fill: #76E8D4;
+      fill: #76e8d4;
     }
   }
 
   .icon-touch {
     :global .primary {
-      fill: #AEE5F5;
+      fill: #aee5f5;
     }
     :global .secondary {
       fill: #182839;
@@ -103,7 +107,8 @@ svg {
   }
 }
 
-.theme-day { }
+.theme-day {
+}
 
 .arrow {
   > :first-child,
@@ -143,9 +148,9 @@ svg {
     transition: transform 0.3s;
 
     &.active {
-    transform: translate(0, 0);
-    transition: transform 0.5s;
-  }
+      transform: translate(0, 0);
+      transition: transform 0.5s;
+    }
   }
 
   > :last-child {
@@ -163,7 +168,10 @@ svg {
     }
   }
 
-  .icon-day-g, .icon-night-g, .icon-day-a, .icon-night-a {
+  .icon-day-g,
+  .icon-night-g,
+  .icon-day-a,
+  .icon-night-a {
     width: 40px;
   }
 
@@ -200,4 +208,43 @@ svg {
     width: 50px;
     transition: transform 0.05s;
   }
+
+  .icon-custom {
+    width: 60px;
+  }
+
+  .picked {
+    z-index: 2;
+    transition: transform 0.2s;
+  }
+}
+
+.message {
+  position: fixed;
+  z-index: 1;
+  top: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: min(300px, 100% - 40px);
+  padding: 15px;
+  padding-top: 90px;
+  border-radius: 15px;
+  background-color: hsla(0, 0%, 100%, 0.75);
+  font-family: Arial, Helvetica, sans-serif;
+
+  > * {
+    text-align: center;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.water {
+  position: relative;
+  top: 100px;
+  padding: 0 10px;
+  width: 100%;
+  z-index: -1;
 }

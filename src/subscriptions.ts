@@ -1,5 +1,5 @@
 import { machineHasAll } from "./utils";
-import { Animate, ResetTime } from "./actions";
+import { Animate, RemoveBubble } from "./actions";
 
 const animateSub = (dispatch, props) => {
   const frame = (delta = undefined) => (time) => {
@@ -21,8 +21,16 @@ const animateSub = (dispatch, props) => {
 }
 const animate = () => [animateSub, {}];
 
+const removeBubbleSub = (dispatch, id) => {
+  dispatch([RemoveBubble, id]);
+
+  // Cleanup function
+  return () => {}
+}
+const removeBubble = ({ id }) => [removeBubbleSub, id];
+
 // Usage in app
 export const subscriptions = (state) => [
-  Object.keys(state.bubbles).length ? animate() : null,
-  // machineHasAll(state.machine, 'menu') ? animate() : null,
+  Object.keys(state.bubbles).length > 0 ? animate() : null,
+  Object.entries(state.bubbles).map(([id, bubble]) => bubble.state == 'dying' && bubble.y < -100 ? removeBubble({ id }) : null),
 ];
